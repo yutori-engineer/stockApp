@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import yahooquery as yq
 # import pprint
-# import mplfinance as mpf
 import random
 from datetime import datetime
 import mplfinance as mpf
