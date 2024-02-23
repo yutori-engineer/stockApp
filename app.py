@@ -19,7 +19,7 @@ symbols = stockCode + '.T'
 tickers = yq.Ticker(symbols,asynchronous=True,backoff_factor=1,formatted=True,progress=True)
 
 # @st.cache_data
-df=tickers.history(period='24mo', interval='1d')
+df=tickers.history(period='12mo', interval='1d')
 
 #ローソク足
 # dg = df.loc[symbols].copy()
