@@ -19,7 +19,7 @@ symbols = stockCode + '.T'
 tickers = yq.Ticker(symbols,asynchronous=True,backoff_factor=1,formatted=True,progress=True)
 
 # @st.cache_data
-df=tickers.history(period='6mo', interval='1d')
+df=tickers.history(period='12mo', interval='1d')
 
 #ローソク足
 # dg = df.loc[symbols].copy()
@@ -50,7 +50,7 @@ di = dh.reset_index()
 di.set_index('Date', inplace=True)
 
 # mplfinanceのプロットをストリームリットで表示する
-fig, ax = mpf.plot(di, type='candle', returnfig=True)
+fig, ax = mpf.plot(di, type='candle', returnfig=True, mav=(5, 20, 60))
 st.pyplot(fig)
 
 # data 表示
