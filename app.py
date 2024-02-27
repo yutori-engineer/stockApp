@@ -16,7 +16,7 @@ st.header('_Trend_ is :blue[true] :sparkles:')
 
 stockCode = st.text_input('Stock Code', '5947')
 symbols = stockCode + '.T'
-tickers = yq.Ticker(symbols,asynchronous=True,backoff_factor=1,formatted=True,progress=True)
+tickers = yq.Ticker(symbols,asynchronous=True,backoff_factor=1,formatted=True,progress=True,retry=3)
 
 # @st.cache_data
 df=tickers.history(period='12mo', interval='1d')
