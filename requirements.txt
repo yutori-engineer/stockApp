@@ -4,5 +4,5 @@ numpy==1.24.3
 matplotlib==3.7.1
 yahooquery==2.3.7
 mplfinance==0.12.10b0
-streamlit-gchart==0.1.8
+streamlit_gchart==0.1.8
 pandas_datareader==0.11.0
